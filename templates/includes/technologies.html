@@ -1,0 +1,35 @@
+{% from "macros.html" import tech_bar with context %}
+<section id="technologies" class="about-mf sect-pt4 route">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                    <h5 class="title-left">
+                        Technologies
+                      </h5>
+                      <br/>
+                    <!--Inside of the Box-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="skill-mf">
+                                {% for tech in technologies %}
+                                    {% if loop.index is not divisibleby(2) %}
+                                        {{ tech_bar(tech.name,tech.level) }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="skill-mf">
+                                {% for tech in technologies %}
+                                    {% if loop.index is divisibleby(2) %}
+                                        {{ tech_bar(tech.name,tech.level) }}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+{% from "macros.html" import smedia_link with context %}
+<section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                    <h5 class="title-left">
+                        About me
+                      </h5>
+                      <br/>
+                    <!--Inside of the Box-->
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <!--Inside of the Boxbox-->
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="{{ url_for('static', filename='img/avatar.jpg') }}" class="img-fluid rounded b-shadow-a" alt="..."> <br/>
+                                </div>
+                                <div class="col-md-7">                                
+                                    <div class="about-info">
+                                        <p><span class="title-s"><i class="fa-solid fa-user"></i> </span>  <span>Jan Peterhänsel</span></p>
+                                        <p><span class="title-s"><i class="fa-solid fa-code"></i> </span>  <span>Python Developer</span></p>
+                                        <p><span class="title-s"><i class="fas fa-envelope"></i> </span>  <span>info@janpeterhaensel.de</span></p>
+                                        <p><span class="title-s"><i class="fas fa-home"></i></span>  <span>Würzburg, Bavaria</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Social Media-->
+                            <div class="row smedia">
+                                {{ smedia_link("linkedin","https://linkedin.com/in/jpeterhaensel") }}
+                                {{ smedia_link("github","https://github.com/007psycho007") }}
+                                {{ smedia_link("codewars","https://www.codewars.com/users/007Psycho007",iconify=True) }}
+                                {{ smedia_link("udemy","https://github.com/007psycho007",iconify=True) }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="lead">
+                                While working as an System Administrator for 5+ years I slowly discovered my love for software and web development. 
+                                Ever since, I worked hard to incorporate my programming skills to improve the workflow in my team 
+                                and taking different courses and tutorials to learn and improve my skillset. 
+                            </p>
+                            <p class="lead">    
+                                But now I'm looking to leave System administration behind 
+                                and commit to become a full time Developer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End About Section -->

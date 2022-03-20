@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
+<!-- =======================================================
+* Template Name: DevFolio - v4.7.1
+* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% if title %}{{ title }}{% endif %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/glightbox.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.min.css') }}">
+        <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {% block content %}{% endblock content %}
+
+        <script src="{{ url_for('static', filename='js/main.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/purecounter.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/glightbox.min.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/typed.min.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/fontawesome.min.js') }}" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </body>
+</html>

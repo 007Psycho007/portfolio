@@ -1,0 +1,29 @@
+{% macro tech_bar(name,percent) %}
+<span class="tech"><i class="fa-solid fa-angle-right"></i> {{ name }}</span> <span class="tech-pull-right">{{ percent }}%</span>
+<div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: {{ percent }}%;" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+{% endmacro %}
+
+{% macro smedia_link(faicon,url,iconify=False) %}
+<div class="col-md-3">
+    <a href="{{ url }}"> 
+        {% if iconify==False %}
+        <i class="fa-brands fa-{{ faicon }}"></i>
+        {% else %}
+        <span class="iconify" data-icon="simple-icons:{{ faicon }}"></span>
+        {% endif %}
+    </a>
+</div>
+{% endmacro %}
+
+{% macro skill_acc(id,name,short_desc) %}
+  <a class="skill" data-toggle="collapse" href="#skills-{{ id }}" aria-expanded="true" aria-controls="skills-{{ id }}">
+    <i class="fa fa-angle-right" aria-hidden="true"></i> {{ name }}
+  </a>
+  <br/>
+<div class="collapse" id="skills-{{ id }}">
+    {{ short_desc }}    
+</div>
+
+{% endmacro %}

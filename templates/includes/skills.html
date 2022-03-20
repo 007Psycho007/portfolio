@@ -1,0 +1,31 @@
+{% from "macros.html" import skill_acc with context %}
+<section id="skills" class="about-mf sect-pt4 route">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                    <h5 class="title-left">
+                        Skill
+                      </h5>
+                      <br/>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            {% for skill in skills %}
+                                {% if loop.index is not divisibleby(2) %}
+                                    {{ skill_acc(loop.index,skill.name,skill.short_desc) }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="col-sm-6">
+                            {% for skill in skills %}
+                                {% if loop.index is divisibleby(2) %}
+                                    {{ skill_acc(loop.index,skill.name,skill.short_desc) }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
