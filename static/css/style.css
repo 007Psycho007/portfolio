@@ -107,6 +107,7 @@ a:hover {
 
 .paralax-mf {
   position: relative;
+  height: 85vh;
   padding: 8rem 0;
 }
 
@@ -194,7 +195,7 @@ a:hover {
   background-color: #fff;
   margin-bottom: 1rem;
   margin-top: 0rem;
-  z-index: 2;
+  z-index: 0;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 768px) {
@@ -524,12 +525,12 @@ a:hover {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.233);
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
 .navbar .dropdown ul li {
-  min-width: 200px;
+  min-width: 20px;
 }
 .navbar .dropdown ul a {
   padding: 10px 20px;
@@ -1321,4 +1322,68 @@ footer .credits a {
 .smedia {
   font-size: 2.0em;
   padding: 30px 10px 5px 10px;
+}
+
+.footnote {
+  font-size: 1.0em;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  color: #6c757d !important;
+}
+
+.project {
+  font-size: 1.3em;
+  margin-top: 10px;
+
+}
+
+.project_desc {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.project_right {
+  font-size: 1.2em;
+  text-align: right;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 20%;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 1040!important;
+  overflow: auto;
+  overflow-y: auto;
+}
+
+.modal-backdrop {
+  z-index: 2;
+}
+
+.project_summary {
+  font-size: 1.2em;
+}
+
+.project_long {
+  font-size: 1.2em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul.proj {
+  list-style: none;
+  padding: 0;
+}
+li.proj {
+  padding-left: 1.3em;
+}
+li.proj:before {
+  content: "\f105"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
 }

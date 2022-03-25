@@ -1,0 +1,71 @@
+{% from "macros.html" import tech_icon with context %}
+<section id="projects" class="about-mf sect-pt4 route">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                    <h5 class="title-left">
+                        Projects
+                    </h5>
+                    <br/>
+                    <!--Inside of the Box-->
+                    <hr>
+                    {% for project in projects %}
+
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <span class="project"><i class="fa-solid fa-angle-right"></i> {{ project.name }}</span><br>
+                                    <span class="project_desc">{{ project.description }}</span><br>
+
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{ project.id }}">
+                                        Open detailed Description
+                                      </button>
+                                </div>
+                            </div>
+
+                            <!--Modal -->
+                            <div class="modal " id="modal-{{ project.id }}" data-backdrop="false" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">{{ project.name }}</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    <div class="modal-body">
+                                        <ul class="project_summary proj">
+                                            <li class="proj">Type: {{ project.type }}</li>
+                                            <li class="proj">Used Techs:&nbsp;{% for tech in project.used_technologies %}{{ tech_icon(tech) }} &nbsp; {% endfor %}
+                                                
+                                            </li>
+                                            {% if project.url %}<li class="proj">Project URL:<a href="{{ project.url }}" target="_blank" rel="noopener noreferrer"> {{ project.url }}<sup><i class="fa-solid fa-arrow-up-right-from-square"></i></sup></a></li>{% endif %}
+                                        </ul>
+                                        <hr>
+                                        <div class="project_long">{{ project.long_description }}</div>
+                                        <hr>
+                                        <ul class="project_summary">
+                                            <ul>
+                                                {% for feat in project.features %}<li>{{ feat }}</li> {% endfor %}
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Modal-->
+
+                                
+                            <hr>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

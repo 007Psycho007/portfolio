@@ -1,0 +1,36 @@
+<section id="contact" class="paralax-mf" style="background-image: url(assets/img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="contact-mf">
+                <div id="contact" class="box-shadow-full">
+                    <div class="title-box-2">
+                        <h5 class="title-left">
+                            Message me
+                        </h5>
+                    </div>
+                    <form action="/sendmail" method="post" role="form" class="php-email-form">
+                        <div class="form-group">
+                            <label for="email">Email address: </label>
+                            <input type="email" class="form-control" placeholder="Enter email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject: </label>
+                            <input type="text" class="form-control" placeholder="Enter Subject" id="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Your Message: </label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LdChxwUAAAAABtThBYWAEymuXfXL6cb-9DP8m0d"></div>
+                        <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                        async defer>
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

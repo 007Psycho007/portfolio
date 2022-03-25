@@ -23,7 +23,27 @@
   </a>
   <br/>
 <div class="collapse" id="skills-{{ id }}">
-    {{ short_desc }}    
+  {{ short_desc}}
 </div>
 
+{% endmacro %}
+
+{% macro tech_icon(tech) %}
+  {% if tech == "Python" %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top" title="{{ tech }}"><i class="fa-brands fa-python"></i></a>
+  {% elif tech == "Flask" %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top" title="{{ tech }}"><span class="iconify" data-icon="cib:flask"></span></a>
+  {% elif tech == "bcrypt" %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top" title="{{ tech }}"><i class="fa-brands fa-python"></i><sup><i class="fa-solid fa-box"></i></sup></a>
+  {% elif tech == "tkinter" %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top" title="{{ tech }}"><span class="iconify" data-icon="carbon:gui"></span></a>
+  {% elif tech == "pandas" %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top" title="{{ tech }}"><span class="iconify" data-icon="simple-icons:pandas"></span></a>
+  {% elif tech == "Bootstrap" %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top" title="{{ tech }}"><span class="iconify" data-icon="akar-icons:bootstrap-fill"></span></a>
+  {% elif tech == "Pico.CSS" %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top" title="{{ tech }}"><span class="iconify" data-icon="akar-icons:css-fill"></span></a>
+  {% else %}
+    <a href="javascript:void(0)"  data-toggle="tooltip" data-placement="top"title="{{ tech }}"><i class="fa-solid fa-circle-question"></i></a>
+  {% endif %}
 {% endmacro %}

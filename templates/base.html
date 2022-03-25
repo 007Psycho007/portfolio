@@ -17,12 +17,24 @@
         <title>{% if title %}{{ title }}{% endif %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon/favicon.svg') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon/favicon.png') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/glightbox.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.min.css') }}">
-        <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+        <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"  async defer></script>
+        <script src="{{ url_for('static', filename='js/jquery.slim.min.js') }}"  async defer></script>
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"  async defer></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/purecounter.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}" async defer></script>
+        <script src="{{ url_for('static', filename='js/fontawesome.min.js') }}" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        
 
     </head>
     <body>
@@ -31,13 +43,16 @@
         <![endif]-->
         {% block content %}{% endblock content %}
 
-        <script src="{{ url_for('static', filename='js/main.js') }}" async defer></script>
-        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}" async defer></script>
-        <script src="{{ url_for('static', filename='js/purecounter.js') }}" async defer></script>
-        <script src="{{ url_for('static', filename='js/glightbox.min.js') }}" async defer></script>
-        <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}" async defer></script>
-        <script src="{{ url_for('static', filename='js/typed.min.js') }}" async defer></script>
-        <script src="{{ url_for('static', filename='js/fontawesome.min.js') }}" async defer></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+        <script type="text/javascript">
+            var onloadCallback = function() {
+              
+            };
+          </script>
     </body>
 </html>
