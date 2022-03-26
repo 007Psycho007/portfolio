@@ -46,15 +46,11 @@
                                         <hr>
                                         <div class="project_long">{{ project.long_description }}</div>
                                         <hr>
-                                        <ul class="project_summary">
-                                            <ul>
-                                                {% for feat in project.features %}<li>{{ feat }}</li> {% endfor %}
-                                            </ul>
+                                        <span class="project">Features</span>
+                                        <ul class="project_summary proj">
+                                            {% for feat in project.features %}<li class="proj">{{ feat }}</li> {% endfor %}
                                         </ul>
                                     </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

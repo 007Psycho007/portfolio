@@ -1,5 +1,4 @@
-<section id="contact" class="paralax-mf" style="background-image: url(assets/img/overlay-bg.jpg)">
-    <div class="overlay-mf"></div>
+<section id="contact" class="about-mf sect-pt4 route" style="background-image: url({{ url_for('static', filename='img/back.jpg') }})">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -10,24 +9,27 @@
                             Message me
                         </h5>
                     </div>
-                    <form action="/" method="post" role="form" class="php-email-form">
+                    <form id="sendmail">
                         <div class="form-group">
                             <label for="email">Email address: </label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
+                            <input type="email" class="form-control" placeholder="Enter email" name="email" id="email">
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject: </label>
-                            <input type="text" class="form-control" placeholder="Enter Subject" id="subject">
+                            <input type="text" class="form-control" placeholder="Enter Subject" name="subject" id="subject">
                         </div>
                         <div class="form-group">
                             <label for="subject">Your Message: </label>
-                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                            <textarea class="form-control" id="message"  name="message" rows="5" placeholder="Message" required></textarea>
                         </div>
                         <div class="g-recaptcha" data-sitekey="{{ recaptcha_public }}"></div>
-                        <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-                        </script>
+                        
+                        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+                        
+
+                        
                     </form>
+                    <button id="submitForm"  class="btn btn-primary" name ="send" disabled>Send Message</button>
                 </div>
             </div>
         </div>
