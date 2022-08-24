@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+    # Run the node application
+    portfolio:
+        container_name: portfolio_flask
+        restart: unless-stopped
+        ports:
+          - "5000:5000"
+        build:
+            context: ./
+
+    # Run the caddy server        
+    caddy:
+        container_name: caddy-service
+        restart: unless-stopped
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:            
+        - $PWD/caddy/Caddyfile:/etc/caddy/Caddyfile
+        - $PWD/site:/srv
+        - caddy_data:/data
+        - caddy_config:/config
+
+        build:
+            context: ./caddy
+volumes:
+  caddy_data:
+  caddy_config: 

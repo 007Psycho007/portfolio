@@ -56,7 +56,7 @@ db.session.add(models.Technologies(name="Bash",level=80))
 db.session.add(models.Technologies(name="HTML & CSS",level=60))
 db.session.add(models.Technologies(name="Git",level=60))
 db.session.add(models.Technologies(name="C++",level=40))
-db.session.add(models.Technologies(name="Docker",level=40))
+db.session.add(models.Technologies(name="Docker",level=60))
 db.session.add(models.Technologies(name="Ansible",level=40))
 
 
@@ -69,5 +69,6 @@ db.session.add(models.Skills(name="Database Design and Operation",short_desc="Un
 db.session.add(models.Skills(name="Data Analysis",short_desc="Experience with analysis data with Python, pandas, numpy, etc. with focus of getting the requested values from the data. This includes, Cleaning, Exploring and Visualising. "))
 db.session.add(models.Skills(name="Cryptography",short_desc="Experience with using cryptographical algorithms like hashes, encryption and certificates."))
 db.session.add(models.Skills(name="Object Oriented Design",short_desc="Experience with applying object oriented Programming patterns like classes and Inheritance"))
+
 db.session.commit()
 
