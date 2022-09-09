@@ -1,9 +1,0 @@
-# Replace example.com with your application's domain
-janpeterhaensel.de {
-  reverse_proxy {$PORTFOLIO_SERVICE_SERVICE_HOST}:5000  {
-    header_down Strict-Transport-Security max-age=31536000;
-   }
-tls {
-    dns ionos 32cb8e4ec93344a580420c1690eff6de.mLuX53vyuQKmADjoymMXc8MVwc52YoepxZzVyt48fz4tFfvDEK3mOiivYU8wME6hfqRaIY_nNrCwv-Ia3b8VSw 
-}
-}
